@@ -18,13 +18,14 @@ angular.module('coreos.ui')
       'size': '@',
       'anchor': '@'
     },
-    controller: function($scope) {
-      $scope.clickHandler = function($event, option) {
-        $event.preventDefault();
+    link: function(scope, elem) {
+      scope.clickHandler = function($event, option) {
         $event.stopPropagation();
+        $event.preventDefault();
         if (option.callback) {
           option.callback();
         }
+        elem.removeClass('open');
       };
     }
   };
