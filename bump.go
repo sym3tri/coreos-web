@@ -44,6 +44,10 @@ var coreosConfigs = map[string]TargetConfig{
 		DistPath: "/mod/dashboard/static/coreos-web/",
 		LibDir:   path.Join(GOPATH, "src/github.com/coreos/etcd/mod/dashboard/app/coreos-web"),
 	},
+	"accounts": TargetConfig{
+		DistPath: "/static/lib/coreos-web/",
+		LibDir:   path.Join(GOPATH, "src/github.com/coreos-inc/accounts/frontend/public/lib/coreos-web"),
+	},
 }
 
 // Execute the grunt command for the library build.
